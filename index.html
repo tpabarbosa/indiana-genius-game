@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiana Genius</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div id="splash-screen" class="">
+        <h1>Indiana Genius</h1>
+        <button id="start-button" class="text-button">Iniciar</button>
+    </div>
+    <div id="main" class="hidden">
+        <header id="options">
+            <h2>Indiana Genius</h2>
+            <div id="buttons">
+                <button id="toggle-music" class="icon-button">🎵</button>
+                <button id="toggle-sfx" class="icon-button">🔊</button>
+            </div>
+        </header>
+
+        <div id="menu" class="">
+            <section id="menu-genius-1" class="genius">
+                <div id="btn-0" class="top-left genius-button"></div>
+                <div id="btn-1" class="top-right genius-button"></div>
+                <div id="btn-2" class="bottom-left genius-button"></div>
+                <div id="btn-3" class="bottom-right genius-button"></div>
+            </section>
+            <sections id="menu-buttons">
+                <button id="normal-mode" class="text-button ">Jogar</button>
+                <!-- <button id="hard-mode" class="text-button ">Difícil</button> -->
+            </sections>
+        </div>
+
+        <div id="game" class="hidden-right">
+            <h3 id="game-score">Fase 0</h3>
+            <div id="game-status" class="hidden">
+                <h3 id="status-message">Você errou!! <br>Game Over</h3>
+                <button id="restart-game" class="text-button ">Reiniciar</button>
+            </div>
+            <section id="menu-genius-2" class="genius ">
+                <div id="btn-4" class="top-left  genius-button"></div>
+                <div id="btn-5" class="top-right  genius-button"></div>
+                <div id="btn-6" class="bottom-left  genius-button"></div>
+                <div id="btn-7" class="bottom-right genius-button "></div>
+            </section>
+        </div>
+    </div>
+
+    <script type="text/javascript " src="js/music.js "></script>
+    <script type="text/javascript " src="js/index.js "></script>
+
+</body>
+
+</html>

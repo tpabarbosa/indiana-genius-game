@@ -1,0 +1,278 @@
+:root {
+    --color: #663e1d;
+    --background-color: #a89d94;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--color);
+    font-family: fantasy;
+    /* background: var(--background-color); */
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/6845542-indiana-jones.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 80px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    text-align: center;
+    padding: 40px 0;
+    letter-spacing: 0.3rem;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 8px;
+    letter-spacing: 0.2rem;
+}
+
+#options {
+    background: white;
+    opacity: 0.7;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-buttons {
+    margin: 20px 0;
+}
+
+.text-button {
+    color: var(--color);
+    background: #000000;
+    padding: 10px;
+    margin: 5px;
+    width: 120px;
+    text-transform: uppercase;
+    font-family: fantasy;
+    letter-spacing: 0.2rem;
+    font-size: large;
+    cursor: pointer;
+    border: 2px double #201e18;
+}
+
+.icon-button {
+    background: var(--background-color);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 100%;
+    font-size: large;
+    cursor: pointer;
+}
+
+#splash-screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    ;
+    flex-direction: column;
+    align-items: center;
+    height: -webkit-fill-available;
+    transition: all 0.3s ease-in;
+}
+
+.background {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    opacity: 0.7;
+    z-index: -1;
+    background: #23280d;
+    top: 15%;
+}
+
+.genius {
+    margin: 10px 0;
+    display: grid;
+    grid-gap: 12px;
+    border: 12px solid #201e18;
+    background-color: #201e18;
+    border-radius: 100%;
+    max-width: 90vw;
+    height: 45vh;
+    aspect-ratio: 1;
+}
+
+#menu-genius-1 {
+    grid-template-areas: 'btn-0 btn-1' 'btn-2 btn-3';
+}
+
+#menu-genius-2 {
+    grid-template-areas: 'btn-4 btn-5' 'btn-6 btn-7';
+}
+
+#game {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    ;
+    flex-direction: column;
+    align-items: center;
+    height: -webkit-fill-available;
+    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#game-status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/804591.jpg);
+    background-size: cover;
+    background-position: 65% 80%;
+    opacity: 0.95;
+    filter: brightness(2);
+    flex-direction: column;
+    transition: all 0.6s ease-in;
+    z-index: 100;
+}
+
+#status-message {
+    color: var(--color);
+    /* background: #000000; */
+    padding: 15px 30px;
+    margin: 5px;
+    text-transform: uppercase;
+    font-family: fantasy;
+    letter-spacing: 0.2rem;
+    font-size: 64px;
+    text-align: center;
+}
+
+#game-score {
+    color: var(--color);
+    background: #000000;
+    filter: brightness(1.5);
+    padding: 15px 30px;
+    margin: 5px;
+    text-transform: uppercase;
+    font-family: fantasy;
+    letter-spacing: 0.2rem;
+    font-size: xxx-large;
+    border: 2px double #201e18;
+}
+
+
+/* .genius-button {
+    box-shadow: -1px 0px 5px 1px black;
+} */
+
+.top-left {
+    border-top-left-radius: 100%;
+    background: radial-gradient(ellipse at 80% 80%, #747c2e 0%, #20220c 70%);
+    /* background: radial-gradient(ellipse at 80% 80%, green 0%, #004800 70%); */
+    box-shadow: -1px 0px 5px 1px black;
+}
+
+.bottom-left {
+    background: radial-gradient(ellipse at 80% 20%, #d9ba46 0%, #54481b 70%);
+    /* background: radial-gradient(ellipse at 80% 20%, yellow 0%, rgb(150, 150, 99) 70%); */
+    border-bottom-left-radius: 100%;
+    box-shadow: -1px 0px 5px 1px black;
+}
+
+.top-right {
+    background: radial-gradient(ellipse at 20% 80%, #50505c 0%, #212122 70%);
+    /* background: radial-gradient(ellipse at 20% 80%, blue 0%, rgb(0, 0, 138) 70%); */
+    border-top-right-radius: 100%;
+    box-shadow: 1px 0px 5px 1px black;
+}
+
+.bottom-right {
+    background: radial-gradient(ellipse at 20% 20%, #a74d17 0%, #602c0d 70%);
+    /* background: radial-gradient(ellipse at 20% 20%, red 0%, rgb(138, 0, 0) 70%); */
+    border-bottom-right-radius: 100%;
+    box-shadow: 1px 0px 5px 1px black;
+}
+
+.opacity-hidden {
+    opacity: 0;
+}
+
+.hidden {
+    position: absolute;
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.hidden-left {
+    position: absolute;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.hidden-right {
+    position: absolute;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.top-left.shine {
+    box-shadow: -1px 0px 16px 5px #747c2e;
+    opacity: 0.8;
+    background: radial-gradient(ellipse at 80% 80%, white -20%, #747c2e 45%);
+}
+
+.bottom-left.shine {
+    box-shadow: -1px 0px 16px 5px #d9ba46;
+    opacity: 0.8;
+    background: radial-gradient(ellipse at 80% 20%, white -20%, #d9ba46 45%);
+}
+
+.top-right.shine {
+    box-shadow: 1px 0px 16px 5px #50505c;
+    opacity: 0.8;
+    background: radial-gradient(ellipse at 20% 80%, white -20%, #50505c 45%);
+}
+
+.bottom-right.shine {
+    box-shadow: 1px 0px 16px 5px #a74d17;
+    opacity: 0.8;
+    background: radial-gradient(ellipse at 20% 20%, white -20%, #a74d17 45%);
+}
+
+
+/* @media (min-width: 500px) {
+    .menu-genius {
+        max-width: 60vw;
+    }
+}
+
+@media (min-width: 600px) {
+    .menu-genius {
+        max-width: 40vw;
+    }
+} */

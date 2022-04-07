@@ -9,7 +9,6 @@
     padding: 0;
     color: var(--color);
     font-family: fantasy;
-    /* background: var(--background-color); */
 }
 
 body {
@@ -54,7 +53,7 @@ h2 {
     background: #000000;
     padding: 10px;
     margin: 5px;
-    width: 120px;
+    width: 150px;
     text-transform: uppercase;
     font-family: fantasy;
     letter-spacing: 0.2rem;
@@ -185,11 +184,6 @@ h2 {
     border: 2px double #201e18;
 }
 
-
-/* .genius-button {
-    box-shadow: -1px 0px 5px 1px black;
-} */
-
 .top-left {
     border-top-left-radius: 100%;
     background: radial-gradient(ellipse at 80% 80%, #747c2e 0%, #20220c 70%);
@@ -263,16 +257,3 @@ h2 {
     opacity: 0.8;
     background: radial-gradient(ellipse at 20% 20%, white -20%, #a74d17 45%);
 }
-
-
-/* @media (min-width: 500px) {
-    .menu-genius {
-        max-width: 60vw;
-    }
-}
-
-@media (min-width: 600px) {
-    .menu-genius {
-        max-width: 40vw;
-    }
-} */

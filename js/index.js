@@ -109,7 +109,7 @@ const checkSequence = () => {
             break;
         }
     }
-    if (game.playerSequence.length === 2 && !game.ended) {
+    if (game.playerSequence.length === 20 && !game.ended) {
         victory();
     }
     if (

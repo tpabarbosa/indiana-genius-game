@@ -19,7 +19,7 @@ function playNote(frequency, duration, btn, cb = null) {
     oscillator.connect(volume);
     oscillator.type = "triangle";
     oscillator.frequency.value = frequency; // value in hertz
-    volume.gain.value = 0.5;
+    volume.gain.value = 0.8;
     volume.connect(audioCtx.destination);
     oscillator.start();
     btn.classList.add("shine");

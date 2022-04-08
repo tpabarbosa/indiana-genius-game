@@ -74,6 +74,10 @@ function playGameOver() {
     if (!audio.music) {
         return;
     }
+    if (go.length === 0) {
+        notes = [...melody];
+        playMelody();
+    }
     if (go.length > 0) {
         note = go.shift();
         const time = note[2] * tempo;
@@ -84,6 +88,10 @@ function playGameOver() {
 function playVictory() {
     if (!audio.music) {
         return;
+    }
+    if (vic.length === 0) {
+        notes = [...melody];
+        playMelody();
     }
     if (vic.length > 0) {
         note = vic.shift();
@@ -163,9 +171,9 @@ const gameover = [
     [...F, 0.25],
     [...G, 0.25],
     [...A, 0.5],
-    [...F, 0.75],
+    [...F, 0.5],
     [...D, 1],
-    [...E, 1.25],
+    [0, btn1, 2],
 ];
 
 let go = [...gameover];
@@ -178,16 +186,17 @@ const victoryTheme = [
     [...B, 0.25],
     [...A, 0.25],
     [...D2, 0.25],
-    [...C2, 0.5],
+    [...C2, 0.25],
     [...B, 0.5],
     [...A, 0.5],
     [...B, 0.75],
     [...A, 0.75],
-    [...C2, 1],
+    [...C2, 1.5],
     [...A, 0.5],
     [...B, 0.75],
     [...A, 0.75],
     [...C2, 1],
+    [0, btn1, 2],
 ];
 
 let vic = [...victoryTheme];

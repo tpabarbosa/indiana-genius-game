@@ -24,6 +24,9 @@ startBtn.onclick = () => {
 normalModeBtn.onclick = () => {
     gameArea.classList.toggle("hidden-right");
     menu.classList.toggle("hidden-left");
+    menu.ontransitionend = () => {
+        menu.classList.add("hidden");
+    };
     audio.isMenu = false;
     gameScore.innerText = `Fase ${game.score}`;
     setTimeout(gameLoop, 1500);
@@ -134,6 +137,7 @@ const gameOver = () => {
 
     setTimeout(() => {
         go = [...gameover];
+        audio.isMenu = true;
         playGameOver();
         gameStatus.classList.toggle("hidden");
         gameStatus.classList.toggle("opacity-hidden");
@@ -147,6 +151,7 @@ const victory = () => {
     gameStatus.style.filter = "brightness(1)";
     setTimeout(() => {
         vic = [...victoryTheme];
+        audio.isMenu = true;
         playVictory();
         gameStatus.classList.toggle("hidden");
         gameStatus.classList.toggle("opacity-hidden");
@@ -154,6 +159,7 @@ const victory = () => {
 };
 
 const newGame = () => {
+    audio.isMenu = false;
     game.turn = TURN.computer;
     game.computerSequence = [];
     game.playerSequence = [];

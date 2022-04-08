@@ -27,7 +27,7 @@ sfxBtn.onclick = () => {
     audio.sfx = !audio.sfx;
 };
 
-const tempo = 384;
+const tempo = 512;
 
 function playNote(frequency, duration, btn, cb = null) {
     // create Oscillator node

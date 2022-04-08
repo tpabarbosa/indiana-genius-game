@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indiana Genius</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/a16d431142.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,8 +20,18 @@
         <header id="options">
             <h2>Indiana Genius</h2>
             <div id="buttons">
-                <button id="toggle-music" class="icon-button">🎵</button>
-                <button id="toggle-sfx" class="icon-button">🔊</button>
+                <button id="toggle-music" class='icon-button'>
+                    <span class="fa-stack">
+                        <i class="fa-solid fa-music fa-stack-1x"></i>
+                        <i id="music-off" class="fa-solid fa-ban fa-stack-2x hidden" style="color:#9b2c2c"></i>
+                    </span>
+                </button>
+                <button id="toggle-sfx" class='icon-button'>
+                    <span class="fa-stack">
+                        <i class="fa-solid fa-volume-high fa-stack-1x"></i>
+                        <i id="sfx-off" class="fa-solid fa-ban fa-stack-2x hidden" style="color:#9b2c2c"></i>
+                    </span>
+                </button>
             </div>
         </header>
 
@@ -38,7 +49,7 @@
         </div>
 
         <div id="game" class="hidden-right">
-            <h3 id="game-score">Fase 0</h3>
+            <h3 id="game-score">Fase 1</h3>
             <div id="game-status" class="hidden">
                 <h3 id="status-message">Você errou!! <br>Game Over</h3>
                 <button id="restart-game" class="text-button ">Reiniciar</button>

@@ -24,9 +24,9 @@ startBtn.onclick = () => {
 normalModeBtn.onclick = () => {
     gameArea.classList.toggle("hidden-right");
     menu.classList.toggle("hidden-left");
-    music.isPlaying = false;
+    audio.isMenu = false;
     gameScore.innerText = `Fase ${game.score}`;
-    setTimeout(gameLoop, 1200);
+    setTimeout(gameLoop, 1500);
 };
 
 restartGameBtn.onclick = () => {
@@ -54,7 +54,7 @@ const game = {
     playerSequence: [],
     ended: false,
     score: 0,
-    frequencies: [332.6, 444, 166.32, 279.6],
+    frequencies: [332.6, 444, 665.28, 279.6],
     buttons: [btn4, btn5, btn6, btn7],
     playInterval: 300,
     playingNotes: [],
@@ -63,6 +63,7 @@ const game = {
 const gameLoop = () => {
     if (!game.ended) {
         game.playerSequence = [];
+        game.score++;
         gameScore.innerText = `Fase ${game.score}`;
         const color = Math.floor(Math.random() * 4);
         game.computerSequence.push(color);
@@ -121,7 +122,6 @@ const checkSequence = () => {
 };
 
 const nextTurn = () => {
-    game.score++;
     game.turn = TURN.computer;
     setTimeout(gameLoop, 500);
 };
@@ -131,7 +131,10 @@ const gameOver = () => {
     gameMessage.innerHTML = `Você errou!! <br>Game Over`;
     gameStatus.style.backgroundImage = "url(images/804591.jpg)";
     gameStatus.style.filter = "brightness(2)";
+
     setTimeout(() => {
+        go = [...gameover];
+        playGameOver();
         gameStatus.classList.toggle("hidden");
         gameStatus.classList.toggle("opacity-hidden");
     }, 500);
@@ -143,6 +146,8 @@ const victory = () => {
     gameStatus.style.backgroundImage = "url(images/804588.png)";
     gameStatus.style.filter = "brightness(1)";
     setTimeout(() => {
+        vic = [...victoryTheme];
+        playVictory();
         gameStatus.classList.toggle("hidden");
         gameStatus.classList.toggle("opacity-hidden");
     }, 500);
